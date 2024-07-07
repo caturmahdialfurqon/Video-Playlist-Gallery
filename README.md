@@ -9,4 +9,4 @@ Visit my Github Page For `Source code`.
 
 ## Here The Screenshot
 
-![video playlist galery](/Asset/lewiscapaldi.png)
+![video playlist galery](/Asset/lewiscapaldi.gif)
