@@ -5,7 +5,7 @@
 This script written with php can Instantly Create a single `HTML` file including `CSS` and `JAVASCRIPT`.
 For Your Video Gallery, also you can watch it Offline on your browser.
 
-Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahdialfurqon.github.io/posts/Video-Playlist-Galery/)
+Visit my Github Page For PHP `Source code` [Video-Playlist-Galery](https://caturmahdialfurqon.github.io/posts/Video-Playlist-Galery/)
 
 ## Here The Screenshot
 
@@ -13,6 +13,10 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
 
 ## UPDATE AND UPGRADE
 `Fri Jul 19 14:44:28 WIB 2024`
+
+## Here The Update Screenshot
+
+![video playlist galery](/Asset/upgrade.gif)
 
 ### Adding Features
 
