@@ -21,63 +21,70 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
 
 ### CSS
 ```css
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             text-transform: capitalize;
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif;
             font-weight: normal;
         }
         body {
-            background: #000033;
+            background: rgba(0, 0, 51, 1);
             color: rgba(255, 255, 255, 0.95);
         }
         .heading {
-            color: #eee;
+            color: #fff;
             font-size: 40px;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+            background: rgba(0, 72, 131, 0.25);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 1.25);
         }
         .container {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 15px;
+            gap: 20px;
             align-items: flex-start;
-            padding: 5px 5%;
+            padding: 20px 5%;
         }
         .container .main-video {
-            background: #152057;
-            border-radius: 5px;
-            padding: 10px;
+            background: #00194D;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 1);
         }
         .container .main-video video {
             width: 100%;
-            border-radius: 5px;
+            border-radius: 9px;
             aspect-ratio: 16 / 9;
+            box-shadow: 0 2px 10px rgba(0, 127, 255, 0.5);
         }
         .container .main-video .title {
             color: rgba(255, 255, 255, 0.95);
-            font-size: 23px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            text-align: center; /* Center title below video */
+            font-size: 24px;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: bold;
         }
         .container .video-list {
-            background: #0000;
-            border-radius: 5px;
+            background: #00194D;
+            border-radius: 10px;
             height: 720px;
             overflow-y: auto;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         .container .video-list::-webkit-scrollbar {
-            width: 7px;
+            width: 8px;
         }
         .container .video-list::-webkit-scrollbar-track {
-            background: #ccc;
+            background: rgba(0, 127, 255, 0.35);
             border-radius: 50px;
         }
         .container .video-list::-webkit-scrollbar-thumb {
-            background: #666;
+            background: rgba(229, 9, 20, 0.5);
             border-radius: 50px;
         }
         .container .video-list .vid video {
@@ -87,45 +94,46 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
         }
         .container .video-list .title {
             color: rgba(255, 255, 255, 0.95);
-            font-size: 10px;
-            text-align: center; /* Center title below video */
-            margin-top: 1em; /* Add space between video and title */
+            font-size: 12px;
+            text-align: center;
+            margin-top: 1em;
         }
         .container .video-list .vid {
             display: flex;
             align-items: center;
             gap: 15px;
-            background: #152057;
+            background: rgba(0, 0, 51, 0.5);
             border-radius: 5px;
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid rgba(0,0,0,.1);
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 127, 255, 1);
         }
         .container .video-list .vid:hover {
-            background: #1C63B2;
+            background: rgba(0, 127, 255, 0.25);
         }
         .container .video-list .vid.active {
-            background: #FF0000;
+            background: rgba(229, 9, 20, 0.35);
         }
+
         button {
-          background-color: #000033; /* Semi-transparent black background */
-          color: white; /* White text for legibility */
-          padding: 0.5em 1em; /* Set button padding */
-          border: none; /* Remove default border */
-          cursor: pointer; /* Indicate clickable button */
-          transition: all 0.2s ease-in-out; /* Smooth hover effect */
+          background-color: rgba(0, 0, 51, 1);
+          color: white;
+          padding: 0.5em 1em;
+          margin-top: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s;
+          box-shadow: 0 1px 2px rgba(255, 255, 255, 1.25);
         }
 
         button:hover {
-          background-color: #FF0000; /* Darken background on hover */
+          background-color: rgba(229, 9, 20, 0.5);
         }
 
-        /* Button positioning and spacing */
-        #prevButton {
-          margin-right: 0em; /* Add spacing between buttons */
-          margin-left: 0em;
-        }
         .search-container {
           margin-bottom: 10px;
         }
@@ -135,8 +143,9 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
           padding: 10px;
           border: none;
           border-radius: 5px;
-          background-color: #152057;
-          color: white;
+          background-color: #010000;
+          color: rgba(255, 255, 255, 0.95);
+          box-shadow: 0 2px 5px rgba(255, 255, 255, 1.15);
         }
         @media (max-width: 991px) {
             .container {
@@ -150,10 +159,51 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
                 padding: 10px;
             }
         }
+    </style>
 ```
+
+### HTML
+
+```html
+</head>
+<body>
+    <h3 class=\"heading\">$titledisplay</h3>
+    <div class=\"container\">
+        <div class=\"main-video\">
+            <div class=\"video\">
+                <video src=\"\" controls></video>
+              </div>
+              <div class=\"navigation-buttons\">
+                <button id=\"prevButton\">⏮ Prev </button>
+                <button id=\"nextButton\">Next ⏭</button>
+              </div>
+              <h3 class=\"title\"></h3>
+            </div>
+        <div class=\"video-list\">
+            <div class=\"search-container\">
+            <input type=\"text\" id=\"searchInput\" placeholder=\"Search video title...\">";
+
+foreach ($videoList as $video) {
+    $html .= "
+            <div class=\"vid\">
+                <video>
+                    <source src=\"{$video["source"]}\" type=\"video/mp4\">
+                    Your browser does not support the video tag.
+                </video>
+                <h3 class=\"title\">{$video["title"]}</h3>
+            </div>";
+}
+
+$html .= "
+        </div>
+    </div>
+```
+
+
 ### Javascript
 
 ```javascript
+      <script>
         let listVideo = document.querySelectorAll('.video-list .vid');
         let mainVideo = document.querySelector('.main-video video');
         let title = document.querySelector('.main-video .title');
@@ -200,4 +250,5 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
 
         // Play the first video initially
         playVideo(0);
+      </script>
 ```
