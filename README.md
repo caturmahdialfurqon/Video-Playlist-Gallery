@@ -19,6 +19,7 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
 - adding Prev and Next Button also Search Tittle Videos
   - just edit the `<style>` and `<script>` on both `GO` or `PHP` source code .
 
+### CSS
 ```css
         * {
             margin: 0;
@@ -150,6 +151,7 @@ Visit my Github Page For `Source code` [Video-Playlist-Galery](https://caturmahd
             }
         }
 ```
+### Javascript
 
 ```javascript
         let listVideo = document.querySelectorAll('.video-list .vid');
